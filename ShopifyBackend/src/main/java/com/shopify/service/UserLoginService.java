@@ -1,5 +1,7 @@
 package com.shopify.service;
 
+import com.shopify.model.UserModel;
+
 public interface UserLoginService {
-	void userAuthentication();
+	UserModel userAuthentication(String userId);
 }

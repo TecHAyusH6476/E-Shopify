@@ -1,13 +1,15 @@
 package com.shopify.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
 public class User {
 
+	@Id
 	@Column(name = "username")
 	private String userId;
 

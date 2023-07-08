@@ -18,15 +18,18 @@ public class CustomUserDetailService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		if(username.equals("Devansh")) {
-			UserModel user = new UserModel();
-			user.setUserId("devansh@gmail.com");
-			user.setUserName("Devansh Agarwal");
-			user.setPassword("abc@123");
-			user.setUserType("user");
-			return (UserDetails) user;
-		}
-		return null;
+		
+//		if(username.equals("Devansh")) {
+//			UserModel user = new UserModel();
+//			user.setUserId("devansh@gmail.com");
+//			user.setUserName("Devansh Agarwal");
+//			user.setPassword("abc@123");
+//			user.setUserType("user");
+//			return (UserDetails) user;
+//		}
+		
+		UserModel userDetails = loginService.userAuthentication(username);
+		return (UserDetails) userDetails;
 	}
 
 }
